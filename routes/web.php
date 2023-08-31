@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 //     [ProductsController::class, 'index'])->name('products');
 
 Route::get('/', [ProductsController::class, 'index']);
-Route::get('/login', LoginForm::class)->name('login-form');
+// Route::get('/login', LoginForm::class)->name('login-form');
 // Route::get('/products/about', [ProductsController::class, 'about']);
 
 // Route::get('/products/{name}', [ProductsController::class, 'show']);
@@ -41,3 +41,9 @@ Route::get('/login', LoginForm::class)->name('login-form');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::middleware(['auth'])->group(function () {
+    
+// });
+
+Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@register');
