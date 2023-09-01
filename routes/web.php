@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
-use App\Http\Livewire\LoginForm;
+// use App\Http\Livewire\LoginForm;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -40,10 +40,11 @@ Route::get('/', [ProductsController::class, 'index']);
 // ]);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
-// });
+});
 
 Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@register');
+Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');

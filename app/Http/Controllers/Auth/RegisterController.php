@@ -67,14 +67,6 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
-        function debug_to_console($data) {
-           $output = $data;
-           if (is_array($output))
-               $output = implode(',', $output);
-    
-           echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-        }
-        debug_to_console($data);
         return User::create([
             'username' => $data['username'],
             'first_name' => $data['first_name'],
