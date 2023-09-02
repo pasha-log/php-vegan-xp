@@ -48,3 +48,5 @@ Route::middleware(['auth'])->group(function () {
 
 Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@register');
 Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');
+// Route::get('/home', 'App\Http\Controllers\Auth\HomeController@showUserInfoAtHomePage')->middleware('auth');
+
