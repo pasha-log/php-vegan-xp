@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+// use Laravel\Fortify\Fortify;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,25 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // $this->registerPolicies();
+
+        // Gate::define('viewWebSocketsDashboard', function ($user = null) {
+        //     // ...
+        // });
+    
+        // Gate::define('updateProfileInformation', function ($user, $model) {
+        //     return $user->id === $model->id;
+        // });
+    
+        // Gate::define('deleteAccount', function ($user, $model) {
+        //     return $user->id === $model->id;
+        // });
+    
+        // // $this->configurePermissions();
+        
+        // // Uncomment the following line
+        // Fortify::emailVerificationView(function () {
+        //     return view('auth.verify');
+        // });
     }
 }

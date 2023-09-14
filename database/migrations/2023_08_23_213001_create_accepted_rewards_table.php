@@ -12,14 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('accepted_rewards', function (Blueprint $table) {
-            $table->foreignId('username')->constrained(
-                table: 'users', indexName: 'username'
-            );
-            $table->foreignId('rewards_id')->constrained(
-                table: 'rewards', indexName: 'id'
-            );
-            $table->primary(['username', 'rewards_id']);
+            $table->string('username'); // Same data type as the primary key in 'users'
+            $table->foreign('username')->references('username')->on('users');
+            
+            // Reference the 'id' column in 'vegan_actions' (assuming it's an unsigned big integer)
+            $table->integer('reward_id')->unsigned();
+            $table->foreign('reward_id')->references('id')->on('rewards');
+            
             $table->timestamps();
+            
+            // Define the primary key as a combination of 'username' and 'vegan_action_id'
+            $table->primary(['username', 'reward_id']);
         });
     }
 

@@ -12,12 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('completed_vegan_actions', function (Blueprint $table) {
-            $table->string('username');
+            $table->string('username'); // Same data type as the primary key in 'users'
             $table->foreign('username')->references('username')->on('users');
-            $table->unsignedBigInteger('vegan_action_id'); // Use unsignedBigInteger to match 'id' data type
+            
+            // Reference the 'id' column in 'vegan_actions' (assuming it's an unsigned big integer)
+            $table->integer('vegan_action_id')->unsigned();
             $table->foreign('vegan_action_id')->references('id')->on('vegan_actions');
-            $table->primary(['username', 'vegan_action_id']);
+            
             $table->timestamps();
+            
+            // Define the primary key as a combination of 'username' and 'vegan_action_id'
+            $table->primary(['username', 'vegan_action_id']);
         });
     }
 
@@ -29,3 +34,4 @@ return new class extends Migration
         Schema::dropIfExists('completed_vegan_actions');
     }
 };
+
