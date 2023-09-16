@@ -14,7 +14,7 @@ class completed_vegan_actions extends Model
     public $incrementing = false;
 
     public function veganAction()
-{
-    return $this->belongsTo(vegan_actions::class, 'vegan_action_id', 'id');
-}
+    {
+        return $this->belongsTo(vegan_actions::class, 'vegan_action_id', 'id');
+    }
 }

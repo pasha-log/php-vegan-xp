@@ -3,8 +3,8 @@
 @section('content')
 <div class="grid grid-cols-2 shadow-lg rounded m-8 bg-green-600">
     <di>
-        <h1 class="text-white p-4 text-center text-4xl">Your profile, {{ $user->username }}.</h1>
-        <h1 class="text-white p-4 text-center text-2xl">Vegan XP Total: 1000 ⭐</h1>
+        <h1 class="text-white p-4 text-center text-4xl">Update Your Profile, {{ $user->username }}.</h1>
+        <h1 class="text-white p-4 text-center text-2xl">Vegan XP Total: {{ $totalVeganXP }} ⭐</h1>
         <form class="text-center" method="PATCH" action="{{ route('edit') }}">
 
             <div class="p-4">
@@ -57,7 +57,7 @@
 
             <div class="p-4">
                 
-                <button type="submit" class="m-2 p-4 border-2 rounded-lg bg-green-900 hover:bg-yellow-400 text-white">
+                <button type="submit" class="m-2 p-4 border-2 rounded-lg bg-green-700 hover:bg-yellow-400 text-white">
                     {{ __('Update Profile') }}
                 </button>
                 

@@ -19,7 +19,8 @@ class VeganActionItem extends Component
     
     public function render()
     {
-        return view('livewire.vegan-action-item');
+        return view('livewire.vegan-action-item'
+    );
     }
 
     public function processCompletedVeganActionData($veganActionId)
