@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-// use App\Models\completed_vegan_actions;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 
 class ProfileController extends Controller
@@ -18,8 +18,7 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
+    public function index() {
         if (Auth::check()) {
             $user = Auth::user();
 
@@ -36,7 +35,23 @@ class ProfileController extends Controller
         }
     }
 
-    public function editProfile() {
+    public function editProfile(Request $request) {
+        if (auth()->check()) {
 
+            // Find the user by username 
+            $user = User::find(auth()->user()->username);
+
+            // Update the user's information
+            $user->username = $request->input('username'); 
+            $user->first_name = $request->input('first_name'); 
+            $user->last_name = $request->input('last_name'); 
+            $user->email = $request->input('email'); 
+
+            // Save the changes to the database
+            $user->save();
+
+        } else {
+            return redirect('/login'); // Redirect to the login page if the user is not authenticated
+        }
     }
 }

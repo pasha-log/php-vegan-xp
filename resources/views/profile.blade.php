@@ -5,7 +5,10 @@
     <di>
         <h1 class="text-white p-4 text-center text-4xl">Update Your Profile, {{ $user->username }}.</h1>
         <h1 class="text-white p-4 text-center text-2xl">Vegan XP Total: {{ $totalVeganXP }} ⭐</h1>
-        <form class="text-center" method="PATCH" action="{{ route('edit') }}">
+        <form class="text-center" method="POST" action="{{ route('edit') }}">
+
+            @csrf
+            @method('PATCH')
 
             <div class="p-4">
                 <label for="username" class="text-white">{{ __('Username') }}</label>
