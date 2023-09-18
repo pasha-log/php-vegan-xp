@@ -20,7 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   
 </head>
-<body>
+<body class="bg-green-600">
     <div id="app">
         @livewire('navbar')
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">

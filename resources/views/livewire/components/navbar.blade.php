@@ -11,12 +11,12 @@
           <!-- Authentication Links -->
           @guest
               @if (Route::has('login'))
-                  <li class="nav-item">
+                  <li class="nav-item text-white">
                       <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                   </li>
               @endif
               @if (Route::has('register'))
-                  <li class="nav-item">
+                  <li class="nav-item text-white">
                       <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                   </li>
               @endif
@@ -26,7 +26,7 @@
                       {{ Auth::user()->name }}
                   </a>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="{{ route('logout') }}"
+                      <a class="dropdown-item text-white" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
                           {{ __('Logout') }}
