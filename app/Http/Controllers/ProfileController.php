@@ -10,7 +10,7 @@ use App\Models\User;
 
 class ProfileController extends Controller
 {
-
+    public $acceptedVeganRewards = [];
     public $completedVeganActions = [];
 
     public function __construct()
@@ -64,8 +64,14 @@ class ProfileController extends Controller
             ->sum('xp_amount');
 
             // dd($totalVeganXP);
+            $acceptedRewardIds = $user->acceptedVeganRewards->pluck('reward_id');
+        
+            // Calculate the total vegan XP by summing xp_amount
+            $totalRewardsXPUsed = DB::table('rewards')
+            ->whereIn('id', $acceptedRewardIds)
+            ->sum('xp_requirement');
             
-            return $totalVeganXP;
+            return $totalVeganXP - $totalRewardsXPUsed;;
             
         } else {
             return redirect('/login'); // Redirect to the login page if the user is not authenticated

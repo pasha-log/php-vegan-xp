@@ -10,6 +10,7 @@ class VeganActionItem extends Component
 {
     public $item;
     public $completedVeganActions = [];
+    public $totalVeganXP;
 
     public function mount($item)
     {
@@ -19,8 +20,7 @@ class VeganActionItem extends Component
     
     public function render()
     {
-        return view('livewire.vegan-action-item'
-    );
+        return view('livewire.vegan-action-item');
     }
 
     public function processCompletedVeganActionData($veganActionId)

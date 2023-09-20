@@ -54,4 +54,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(completed_vegan_actions::class, 'username', 'username');
     }
+
+    public function acceptedVeganRewards()
+    {
+        return $this->hasMany(accepted_rewards::class, 'username', 'username');
+    }
 }
