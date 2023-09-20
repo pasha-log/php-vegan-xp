@@ -2,7 +2,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\vegan_actions; // Replace with your actual model
+use App\Models\vegan_actions; 
 
 class VeganActionItemList extends Component
 {
@@ -10,7 +10,7 @@ class VeganActionItemList extends Component
 
     public function mount()
     {
-        $this->items = vegan_actions::all(); // Replace with your model and query
+        $this->items = vegan_actions::all(); 
         // dd($this->items);
     }
 

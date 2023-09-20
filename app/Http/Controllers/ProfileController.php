@@ -23,8 +23,20 @@ class ProfileController extends Controller
             $user = Auth::user();
 
             $totalVeganXP = $this->calculateTotalXP();
+
+            $completedActionIds = $user->completedVeganActions->pluck('vegan_action_id');
             
-            return view('profile', compact('user', 'totalVeganXP'));
+            // Get the actions completed by the user
+            $completedActions = DB::table('vegan_actions')
+            ->whereIn('id', $completedActionIds)->get();
+
+            $acceptedRewardIds = $user->acceptedVeganRewards->pluck('reward_id');
+            
+            // Get the rewards accepted by the user
+            $acceptedRewards = DB::table('rewards')
+            ->whereIn('id', $acceptedRewardIds )->get();
+
+            return view('profile', compact('user', 'totalVeganXP', 'completedActions', 'acceptedRewards'));
         } else {
             return redirect('/login'); // Redirect to the login page if the user is not authenticated
         }
@@ -66,7 +78,7 @@ class ProfileController extends Controller
             // dd($totalVeganXP);
             $acceptedRewardIds = $user->acceptedVeganRewards->pluck('reward_id');
         
-            // Calculate the total vegan XP by summing xp_amount
+            // Calculate the total vegan XP by summing xp_amount and subtracting accepted reward xp_requirements
             $totalRewardsXPUsed = DB::table('rewards')
             ->whereIn('id', $acceptedRewardIds)
             ->sum('xp_requirement');
