@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/rewards', [App\Http\Controllers\RewardsController::class, 'index'])->name('rewards');
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
     Route::patch('/edit', [App\Http\Controllers\ProfileController::class, 'editProfile'])->name('edit');
 });
