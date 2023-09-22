@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="grid grid-cols-2 gap-1 ">
+<div class="grid grid-cols-2 gap-1 mt-20">
     <div class="flex justify-center">
         <img src="https://i.seadn.io/gae/DTiD3ODv8T9HATow0QxqRncqAEHe18jwpe1cfeo42rzFiQTHdheIpvb-mPZNgsAuPUZt4NsoC4yF-USM4M0Dzjp__sHaceqieazL?auto=format&dpr=1&w=1000"/>
     </div>

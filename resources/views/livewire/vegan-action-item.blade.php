@@ -1,4 +1,4 @@
-<div wire:poll="refreshComponent" class="grid justify-items-center text-center border-2 border-slate-700 p-2 bg-green-300">
+<div wire:poll="refreshComponent" class="grid justify-items-center text-center border-2 rounded border-slate-700 p-2 bg-green-300">
     <h1 class="text-8xl m-4">{{ $item->icon }}</h1>
     <h2 class="font-bold">{{ $item->title }}: {{ $item->xp_amount }} XP</h2>
     <p>{{ $item->description }}</p>

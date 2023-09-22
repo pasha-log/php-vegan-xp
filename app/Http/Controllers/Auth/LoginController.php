@@ -36,7 +36,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed
-            return redirect()->intended('/home'); // Redirect to the intended page
+            return redirect()->intended('/'); // Redirect to the intended page
         } else {
             // Authentication failed
             return back()->withErrors(['username' => 'Invalid credentials']);

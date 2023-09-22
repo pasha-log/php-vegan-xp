@@ -83,7 +83,7 @@ class ProfileController extends Controller
             ->whereIn('id', $acceptedRewardIds)
             ->sum('xp_requirement');
             
-            return $totalVeganXP - $totalRewardsXPUsed;;
+            return $totalVeganXP - $totalRewardsXPUsed;
             
         } else {
             return redirect('/login'); // Redirect to the login page if the user is not authenticated

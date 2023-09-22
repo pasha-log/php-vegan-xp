@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="grid grid-cols-2 shadow-xl rounded m-8 bg-green-600">
+<div class="grid grid-cols-2 shadow-xl rounded m-20 bg-green-600">
     <di class="grid">
         <h1 class="text-white p-4 text-center text-4xl">Update Your Profile, {{ $user->username }}.</h1>
         <h1 class="text-white p-4 text-center text-2xl">Vegan XP Total: {{ $totalVeganXP }} ⭐</h1>
@@ -79,7 +79,7 @@
             <h2 class="text-center text-white text-xl font-bold mt-4">Completed Vegan Activism ✊</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-2 text-center">
                 @foreach ($completedActions as $item)
-                <div class="border-2 border-white rounded">
+                <div class="border-2 border-white rounded bg-green-300">
                     <div class="text-8xl m-4">
                         {{ $item->icon }}
                     </div>
@@ -90,7 +90,7 @@
             <h2 class="text-center text-white text-xl font-bold mt-4">Accepted Rewards 🏆</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-2 text-center">
                 @foreach ($acceptedRewards as $item)
-                <div class="border-2 border-white rounded">
+                <div class="border-2 border-white rounded bg-green-300">
                     <div class="text-8xl m-4">
                         {{ $item->icon }}
                     </div>
