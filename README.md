@@ -1,66 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Vegan XP: Laravel Project For the Vegan Hacktivists
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<div style="position:relative;width:fit-content;height:fit-content;">
+    <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/JzkVygBD7ho?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+        <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+    </a>
+    <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/JzkVygBD7ho/embed" width="640" height="360"></iframe>
+</div>
 
-## About Laravel
+## Description: 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This is a project that I built in order to learn Laravel and the PHP backend programming language in order to understand the tooling of the [Vegan Hacktivist](https://veganhacktivists.org/) organization. This project is supposed to be a mock of what the organization is currently working on: a platform where vegans can compete with each other in a friendly manner in terms of animal rights activism.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Users can register/login into their accounts and complete Vegan activist actions in order to gain XP and play their part in helping the Animal Rights Movement. Users accumulate XP and can claim special rewards in exchange of the XP. Users can update their profile information with ease and can see who dominates the leaderboard in terms of XP. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The rewards availability autoupdates the more you spend your XP. When you don't have enough XP for other rewards after purchasing a different on, the rest of the rewards update availiblity status automatically with the help of Livewire's `wire:poll` function for avoiding page refresh.
 
-## Learning Laravel
+## Tools Used: 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* [PHP](https://www.php.net/)
+* [Laravel](https://laravel.com/)
+* [MySQL](https://www.mysql.com/)
+* [Eloquent](https://laravel.com/docs/10.x/eloquent)
+* [Livewire](https://laravel-livewire.com/)
+* [TailwindCSS](https://tailwindcss.com/docs/installation)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Getting Started
+After cloning the repository, install all dependencies by executing `npm install` within the top level project directory. 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The following command will execute all pending migrations and create the necessary database tables defined in your migration files. Make sure your database configuration in the .env file is correctly set up before running migrations.
 
-## Laravel Sponsors
+Configure your database connection in the .env file:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=yourDatabaseName
+DB_USERNAME=yourDatabaseUsername
+DB_PASSWORD='yourPassword'
 
-### Premium Partners
+Run database migrations:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### `php artisan migrate`
 
-## Contributing
+Make sure you have MySQL installed in your environment, have a database created, and make sure it is running with this command (if not already):
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### `sudo service mysql start`
 
-## Code of Conduct
+Run the application in developer mode:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### `php artisan serve`
 
-## Security Vulnerabilities
+Compile assets:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### `npm run dev`
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

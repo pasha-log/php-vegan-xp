@@ -37,10 +37,5 @@ class AuthServiceProvider extends ServiceProvider
         // });
     
         // // $this->configurePermissions();
-        
-        // // Uncomment the following line
-        // Fortify::emailVerificationView(function () {
-        //     return view('auth.verify');
-        // });
     }
 }

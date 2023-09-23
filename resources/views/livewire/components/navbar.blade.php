@@ -1,5 +1,5 @@
 @vite('resources/css/app.css')
-<nav class="bg-white dark:bg-emerald-300 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+<nav class="bg-white shadow-xl dark:bg-emerald-600 fixed w-full z-20 top-0 left-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" class="flex items-center">
       <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">🥕 Vegan XP</span>
@@ -29,7 +29,7 @@
                       {{ Auth::user()->username }}
                   </a> -->
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item text-white font-bold hover:text-emerald-600" href="{{ route('logout') }}"
+                      <a class="dropdown-item text-white font-bold hover:text-emerald-300" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
                           {{ __('Logout') }}
@@ -49,18 +49,18 @@
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-emerald-300 text-lg  font-bold">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-emerald-600 text-lg  font-bold">
       <li>
-        <a href="/" class="{{ request()->is('/') ? 'active-link' : '' }} block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:dark:hover:text-emerald-600" aria-current="page">Home</a>
+        <a href="/" class="{{ request()->is('/') ? 'active-link' : '' }} block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:dark:hover:text-emerald-300" aria-current="page">Home</a>
       </li>
       <li>
-        <a href="profile" class="{{ request()->is('profile') ? 'active-link' : '' }} block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-emerald-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
+        <a href="profile" class="{{ request()->is('profile') ? 'active-link' : '' }} block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-emerald-300 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
       </li>
       <li>
-        <a href="{{ route('rewards') }}" class="{{ request()->is('rewards') ? 'active-link' : '' }} block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-emerald-600 md:dark:hover:bg-transparent dark:border-gray-700">Rewards</a>
+        <a href="{{ route('rewards') }}" class="{{ request()->is('rewards') ? 'active-link' : '' }} block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white dark:hover:bg-gray-700 md:dark:hover:text-emerald-300 md:dark:hover:bg-transparent dark:border-gray-700">Rewards</a>
       </li>
       <li>
-        <a href="leaderboard" class="{{ request()->is('leaderboard') ? 'active-link' : '' }} block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-emerald-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Leaderboard</a>
+        <a href="leaderboard" class="{{ request()->is('leaderboard') ? 'active-link' : '' }} block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-emerald-300 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Leaderboard</a>
       </li>
     </ul>
   </div>
@@ -69,6 +69,6 @@
 
 <style>
     .active-link {
-      color: rgb(5,150,105);
+      color: 	rgb(110,231,183);
     }
 </style>

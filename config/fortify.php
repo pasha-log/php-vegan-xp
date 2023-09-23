@@ -123,7 +123,6 @@ return [
         'register' => 'auth.register',
         'reset-password' => 'auth.reset-password',
         'forgot-password' => 'auth.forgot-password',
-        // 'verify-email' => 'auth.verify', // Change this to 'auth.verify'
         'two-factor-challenge' => 'auth.two-factor-challenge',
     ],
 
@@ -141,7 +140,6 @@ return [
     'features' => [
         Features::registration(),
         Features::resetPasswords(),
-        // Features::emailVerification(),
         Features::updateProfileInformation(),
         Features::updatePasswords(),
         Features::twoFactorAuthentication([
