@@ -1,6 +1,6 @@
 # Vegan XP: Laravel Project For the Vegan Hacktivists
 
-[![Video Screenshot](/vegan-xp-screenshot.png)](https://clipchamp.com/watch/JzkVygBD7ho)
+[![Video Screenshot](/public/vegan-xp-screenshot.png)](https://clipchamp.com/watch/JzkVygBD7ho)
 
 ## Description: 
 
