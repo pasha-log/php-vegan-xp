@@ -1,14 +1,15 @@
 # Vegan XP: Laravel Project For the Vegan Hacktivists
 
-[![Video Screenshot](/public/vegan-xp-screenshot.png)](https://clipchamp.com/watch/JzkVygBD7ho)
+[![Video Screenshot](/public/vegan-xp-screenshot.png)](https://clipchamp.com/watch/JzkVygBD7ho)<sup>Click to Play Video</sup>
+
 
 ## Description: 
 
-This is a project that I built in order to learn Laravel and the PHP backend programming language in order to understand the tooling of the [Vegan Hacktivist](https://veganhacktivists.org/) organization. This project is supposed to be a mock of what the organization is currently working on: a platform where vegans can compete with each other in a friendly manner in terms of animal rights activism.
+This project was developed to learn Laravel and the PHP backend programming language, providing insights into the tooling used by the [Vegan Hacktivist](https://veganhacktivists.org/) organization. It serves as a simulation of the organization's ongoing work—a platform where vegans can engage in friendly competition related to animal rights activism.
 
-Users can register/login into their accounts and complete Vegan activist actions in order to gain XP and play their part in helping the Animal Rights Movement. Users accumulate XP and can claim special rewards in exchange of the XP. Users can update their profile information with ease and can see who dominates the leaderboard in terms of XP. 
+Users can register and log into their accounts to complete vegan activist actions, earning XP while contributing to the Animal Rights Movement. As users accumulate XP, they can exchange it for special rewards. The platform also allows users to easily update their profile information and view the XP leaderboard.
 
-The rewards availability autoupdates the more you spend your XP. When you don't have enough XP for other rewards after purchasing a different one, the rest of the rewards update availiblity status automatically with the help of Livewire's `wire:poll` function for avoiding page refresh.
+Reward availability automatically updates as users spend their XP. When a user lacks sufficient XP for certain rewards after claiming others, Livewire's `wire:poll` function ensures the availability status of remaining rewards is updated without requiring a page refresh.
 
 ## Tools Used: 
 
