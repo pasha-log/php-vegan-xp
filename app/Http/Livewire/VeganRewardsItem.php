@@ -2,12 +2,11 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\accepted_rewards;
+use App\Models\AcceptedRewards;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\DB;
 
 class VeganRewardsItem extends Component
 {
@@ -36,7 +35,7 @@ class VeganRewardsItem extends Component
             if (Auth::check()) {
                 $user = auth()->user()->username;
 
-                $record = new accepted_rewards();
+                $record = new AcceptedRewards();
                 $record->setTable('accepted_rewards');
                 $record->username = $user;
                 $record->reward_id = $rewardId;

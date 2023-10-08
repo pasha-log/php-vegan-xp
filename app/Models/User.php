@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -53,20 +52,19 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function completedVeganActions()
     {
-        return $this->hasMany(completed_vegan_actions::class, 'username', 'username');
+        return $this->hasMany(CompletedVeganActions::class, 'username', 'username');
     }
 
     public function acceptedVeganRewards()
     {
-        return $this->hasMany(accepted_rewards::class, 'username', 'username');
+        return $this->hasMany(AcceptedRewards::class, 'username', 'username');
     }
 
     public function calculateTotalAccumulatedXP() {
             $completedActionIds = $this->completedVeganActions->pluck('vegan_action_id');
             
             // Calculate the total vegan XP by summing xp_amount
-            return DB::table('vegan_actions')
-            ->whereIn('id', $completedActionIds)
+            return VeganActions::whereIn('id', $completedActionIds)
             ->sum('xp_amount');
     }
 }

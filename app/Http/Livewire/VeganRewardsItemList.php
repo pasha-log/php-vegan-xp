@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\rewards;
+use App\Models\Rewards;
 
 class VeganRewardsItemList extends Component
 {
@@ -12,7 +12,7 @@ class VeganRewardsItemList extends Component
 
     public function mount()
     {
-        $this->items = rewards::all(); // Replace with your model and query
+        $this->items = Rewards::all(); // Replace with your model and query
     }
 
     public function render()

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class completed_vegan_actions extends Model
+class CompletedVeganActions extends Model
 {
     use HasFactory;
 
@@ -15,6 +15,6 @@ class completed_vegan_actions extends Model
 
     public function veganAction()
     {
-        return $this->belongsTo(vegan_actions::class, 'vegan_action_id', 'id');
+        return $this->belongsTo(VeganActions::class, 'vegan_action_id', 'id');
     }
 }

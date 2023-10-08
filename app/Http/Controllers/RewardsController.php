@@ -9,10 +9,9 @@ use Illuminate\View\View;
 class RewardsController extends Controller
 {
     
-    public function index(): View
-    {
-            $user = Auth::user();
-            
-            return view('rewards', compact('user'));
+    public function index(): View {
+        $user = Auth::user();
+        
+        return view('rewards', compact('user'));
     }
 }

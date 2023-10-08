@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\completed_vegan_actions;
+use App\Models\CompletedVeganActions;
 use Livewire\Component;
 use Illuminate\Support\Facades\Log;
 
@@ -30,7 +30,7 @@ class VeganActionItem extends Component
                 
                 $user = auth()->user()->username;
     
-                $record = new completed_vegan_actions();
+                $record = new CompletedVeganActions();
                 $record->setTable('completed_vegan_actions');
                 $record->username = $user;
                 $record->vegan_action_id = $veganActionId;

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class accepted_rewards extends Model
+class AcceptedRewards extends Model
 {
     use HasFactory;
 
@@ -15,6 +15,6 @@ class accepted_rewards extends Model
 
     public function rewards()
     {
-        return $this->belongsTo(rewards::class, 'reward_id', 'id');
+        return $this->belongsTo(Rewards::class, 'reward_id', 'id');
     }
 }

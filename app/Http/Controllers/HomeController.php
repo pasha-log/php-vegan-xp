@@ -9,12 +9,9 @@ use Illuminate\View\View;
 class HomeController extends Controller
 {
 
-    public function index(): View
-    {
-
+    public function index(): View {
         $user = Auth::user();
     
         return view('home', compact('user'));
-
     }
 }

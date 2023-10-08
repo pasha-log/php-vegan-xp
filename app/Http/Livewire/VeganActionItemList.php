@@ -2,7 +2,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\vegan_actions; 
+use App\Models\VeganActions;
 
 class VeganActionItemList extends Component
 {
@@ -10,8 +10,7 @@ class VeganActionItemList extends Component
 
     public function mount()
     {
-        $this->items = vegan_actions::all(); 
-        // dd($this->items);
+        $this->items = VeganActions::all(); 
     }
 
     public function render()
