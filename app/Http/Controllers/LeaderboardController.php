@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class LeaderboardController extends Controller
 {
@@ -13,7 +14,7 @@ class LeaderboardController extends Controller
         $this->middleware('auth');
     }
     
-    public function index() {
+    public function index(): View {
         if (Auth::check()) {
             $user = Auth::user();
 

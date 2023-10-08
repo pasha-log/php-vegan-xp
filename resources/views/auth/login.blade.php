@@ -19,13 +19,13 @@
                             <label for="username" class="">{{ __('Username') }}</label>
 
                             <div class="">
-                                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror w-full" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror w-full text-black" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                                 @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                    @enderror
+                                @enderror
                             </div>
                         </div>
 

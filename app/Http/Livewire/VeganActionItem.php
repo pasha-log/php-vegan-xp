@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Log;
 class VeganActionItem extends Component
 {
     public $item;
-    public $completedVeganActions = [];
+    public array $completedVeganActions = [];
     public $totalVeganXP;
 
     public function mount($item)

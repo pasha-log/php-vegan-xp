@@ -26,3 +26,12 @@ Route::middleware(['auth'])->group(function () {
 Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@register');
 Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');
 
+/**
+ * Fix typing.
+ * Fix tailwind.config
+ * Remove redundant auth logic.
+ * Remove unnecessary DB calls, and replace with Eloquent.
+ * Properly add seeding and add to README accordingly.
+ * Change names of Models.
+ * Add additional validation in the backend.
+ */

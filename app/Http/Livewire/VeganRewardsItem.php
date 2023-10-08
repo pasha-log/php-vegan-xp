@@ -14,7 +14,7 @@ class VeganRewardsItem extends Component
 
     public $item;
     public $totalVeganXP;
-    public $acceptedVeganRewards = [];
+    public array $acceptedVeganRewards = [];
     
     public function mount($item)
     {

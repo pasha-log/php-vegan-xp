@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class RewardsController extends Controller
 {
@@ -12,7 +13,7 @@ class RewardsController extends Controller
         $this->middleware('auth');
     }
     
-    public function index()
+    public function index(): View
     {
         if (Auth::check()) {
             $user = Auth::user();

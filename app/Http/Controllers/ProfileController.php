@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
-
+use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
-    public $acceptedVeganRewards = [];
-    public $completedVeganActions = [];
+    public array $acceptedVeganRewards = [];
+    public array $completedVeganActions = [];
 
     public function __construct()
     {
         $this->middleware('auth');
     }
     
-    public function index() {
+    public function index(): View {
         if (Auth::check()) {
             $user = Auth::user();
 
