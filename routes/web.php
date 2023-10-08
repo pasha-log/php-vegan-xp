@@ -28,8 +28,6 @@ Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');
 
 /**
  * 
- * Remove unnecessary DB calls, and replace with Eloquent.
  * Properly add seeding and add to README accordingly.
- * Change names of Models.
  * Add additional validation in the backend.
  */

@@ -18,6 +18,7 @@ Reward availability automatically updates as users spend their XP. When a user l
 * [MySQL](https://www.mysql.com/)
 * [Eloquent](https://laravel.com/docs/10.x/eloquent)
 * [Livewire](https://laravel-livewire.com/)
+* [Fortify](https://laravel.com/docs/10.x/fortify)
 * [TailwindCSS](https://tailwindcss.com/docs/installation)
 
 ## Getting Started
@@ -43,6 +44,10 @@ Run database migrations:
 Make sure you have MySQL installed in your environment, have a database created, and make sure it is running with this command (if not already):
 
 ### `sudo service mysql start`
+
+Seed the database with vegan actions and rewards data: 
+
+### `php artisan db:seed`
 
 Run the application in developer mode:
 
