@@ -28,7 +28,6 @@ Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');
 
 /**
  * 
- * Fix tailwind.config
  * Remove redundant auth logic.
  * Remove unnecessary DB calls, and replace with Eloquent.
  * Properly add seeding and add to README accordingly.

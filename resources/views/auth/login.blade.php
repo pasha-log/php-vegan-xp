@@ -57,12 +57,12 @@
 
                         <div class="mb-0">
                             <div class="">
-                                <button type="submit" class="m-2 p-4 border-2 rounded-lg bg-green-600 text-white hover:bg-yellow-400">
+                                <button type="submit" class="m-2 p-4 border-2 rounded-lg bg-emerald-600 text-white hover:bg-yellow-400">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="m-2 p-4 border-2 rounded-lg bg-green-600 text-white hover:bg-yellow-400" href="{{ route('password.request') }}">
+                                    <a class="m-2 p-4 border-2 rounded-lg bg-emerald-600 text-white hover:bg-yellow-400" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif

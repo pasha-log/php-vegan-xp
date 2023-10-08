@@ -12,14 +12,8 @@ class ProfileController extends Controller
 {
     public array $acceptedVeganRewards = [];
     public array $completedVeganActions = [];
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     
     public function index(): View {
-        if (Auth::check()) {
             $user = Auth::user();
 
             $totalVeganXP = $this->calculateTotalXP();
@@ -37,14 +31,9 @@ class ProfileController extends Controller
             ->whereIn('id', $acceptedRewardIds )->get();
 
             return view('profile', compact('user', 'totalVeganXP', 'completedActions', 'acceptedRewards'));
-        } else {
-            return redirect('/login'); // Redirect to the login page if the user is not authenticated
-        }
     }
     
     public function editProfile(Request $request) {
-        if (auth()->check()) {
-            
             // Find the user by username 
             $user = User::find(auth()->user()->username);
             
@@ -59,14 +48,9 @@ class ProfileController extends Controller
             
             // Redirect to a success page or show a success message
             return redirect()->route('profile')->with('success', 'Profile updated successfully');
-
-        } else {
-            return redirect('/login'); // Redirect to the login page if the user is not authenticated
-        }
     }
 
     public function calculateTotalXP() {
-        if (Auth::check()) {
             $user = Auth::user();
             $completedActionIds = $user->completedVeganActions->pluck('vegan_action_id');
             
@@ -84,9 +68,5 @@ class ProfileController extends Controller
             ->sum('xp_requirement');
             
             return $totalVeganXP - $totalRewardsXPUsed;
-            
-        } else {
-            return redirect('/login'); // Redirect to the login page if the user is not authenticated
-        }
     }
 }
