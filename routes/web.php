@@ -27,7 +27,7 @@ Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@register'
 Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');
 
 /**
- * Fix typing.
+ * 
  * Fix tailwind.config
  * Remove redundant auth logic.
  * Remove unnecessary DB calls, and replace with Eloquent.

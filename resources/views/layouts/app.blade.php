@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   
 </head>
-<body class="bg-green-600">
+<body class="bg-emerald-600">
     <div id="app">
         @livewire('navbar')
 
