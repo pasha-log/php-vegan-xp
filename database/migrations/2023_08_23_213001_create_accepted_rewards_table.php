@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('accepted_rewards', function (Blueprint $table) {
             $table->string('username'); // Same data type as the primary key in 'users'
-            $table->foreign('username')->references('username')->on('users');
+            $table->foreign('username')->references('username')->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
             
             // Reference the 'id' column in 'vegan_actions' (assuming it's an unsigned big integer)
             $table->integer('reward_id')->unsigned();

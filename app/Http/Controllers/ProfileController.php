@@ -32,6 +32,14 @@ class ProfileController extends Controller
         // Find the user by username 
         $user = User::find(auth()->user()->username);
         
+        // Validate input data
+        $request->validate([
+                'username' => 'required|max:20',
+                'first_name' => 'required|max:50',
+                'last_name' => 'required|max:50',
+                'email' => 'required|email'
+        ]); 
+
         // Update the user's information
         $user->username = $request->input('username'); 
         $user->first_name = $request->input('first_name'); 

@@ -28,6 +28,5 @@ Route::post('/login', 'App\Http\Controllers\Auth\LoginController@login');
 
 /**
  * 
- * Properly add seeding and add to README accordingly.
  * Add additional validation in the backend.
  */
